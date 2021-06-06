@@ -2,7 +2,7 @@
 
 Runtime image for Geant4 (single thread, w/o visualization).
 
-This image is based on Ubuntu 20.04 LTS.
+This image is based on `Ubuntu 20.04 LTS`.
 
 Geant4 is installed in
 * /opt/geant4 : headers and libraries
@@ -12,7 +12,7 @@ Geant4 is installed in
 
 # Supported Tags
 
-* `primary` : latest version of Geant4
+* `main` : latest version of Geant4
 * `10.7.1` : v10.7.p01
 
 # License
