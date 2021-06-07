@@ -22,7 +22,7 @@ WORKDIR /opt/geant4/build
 RUN cmake -DCMAKE_INSTALL_PREFIX=/opt/geant4/${g4version} \
           -DGEANT4_INSTALL_DATA=ON \
           -DGEANT4_INSTALL_DATADIR=/opt/geant4/data ../geant4.${g4version} && \
-    make -j20 && \
+    make -j4 && \
     make install
 
 # -------------------------------------------------------------------
