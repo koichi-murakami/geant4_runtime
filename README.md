@@ -13,6 +13,7 @@ Geant4 is installed in
 # Supported Tags
 
 * `main` : latest version of Geant4
+* `10.7.2` : v10.7.p02
 * `10.7.1` : v10.7.p01
 
 # License
