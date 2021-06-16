@@ -21,8 +21,9 @@ RUN wget https://geant4-data.web.cern.ch/releases/geant4.${g4version}.tar.gz && 
 WORKDIR /opt/geant4/build
 RUN cmake -DCMAKE_INSTALL_PREFIX=/opt/geant4/${g4version} \
           -DGEANT4_INSTALL_DATA=ON \
+          -DGEANT4_BUILD_MULTITHREADED=ON \
           -DGEANT4_INSTALL_DATADIR=/opt/geant4/data ../geant4.${g4version} && \
-    make -j4 && \
+    make -j`nproc` && \
     make install
 
 # -------------------------------------------------------------------
