@@ -5,7 +5,7 @@ LABEL maintener="Koichi Murakami <koichi.murakami@kek.jp>"
 
 ENV DEBIAN_FRONTEND=nointeractive
 
-ARG g4version="10.07.p02"
+ARG g4version="10.06.p03"
 
 #
 RUN apt update && \
@@ -31,7 +31,7 @@ LABEL maintener="Koichi Murakami <koichi.murakami@kek.jp>"
 
 ENV DEBIAN_FRONTEND=nointeractive
 
-ARG g4version="10.07.p02"
+ARG g4version="10.06.p03"
 
 RUN apt update && \
     apt install -y tcsh zsh sudo make build-essential vim \
