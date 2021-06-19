@@ -17,6 +17,7 @@ Geant4 is installed in
 * `10.7.2-mt` : v10.7.p02 (MT)
 * `10.7.2` : v10.7.p02
 * `10.7.1` : v10.7.p01
+* `10.6.3` : v10.6.p03
 
 # License
 BSD 2-Clause License
