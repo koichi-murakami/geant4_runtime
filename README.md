@@ -14,6 +14,8 @@ Geant4 is installed in
 # Supported Tags
 
 * `latest` : latest version of Geant4 (single thread)
+* `10.7.3-mt` : v10.7.p03 (MT)
+* `10.7.3` : v10.7.p03
 * `10.7.2-mt` : v10.7.p02 (MT)
 * `10.7.2` : v10.7.p02
 * `10.7.1` : v10.7.p01
