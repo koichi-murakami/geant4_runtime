@@ -13,7 +13,8 @@ Geant4 is installed in
 
 # Supported Tags
 
-* `latest` : latest version of Geant4 (single thread)
+* `latest` : latest version of Geant4
+* `11.0.0` : v11.0
 * `10.7.3-mt` : v10.7.p03 (MT)
 * `10.7.3` : v10.7.p03
 * `10.7.2-mt` : v10.7.p02 (MT)
@@ -24,7 +25,7 @@ Geant4 is installed in
 # License
 BSD 2-Clause License
 
-Copyright (c) 2017-2021, Koichi Murakami<br>
+Copyright (c) 2017-2022, Koichi Murakami<br>
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -49,6 +50,6 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 The above copyright and license notice applies to distributions of
-G4Bench software in source and binary form.  Some source files contain
+G4Bench software in source and binary form. Some source files contain
 additional notices of original copyright by their contributors;
 see each source for details.
