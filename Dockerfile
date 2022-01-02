@@ -5,7 +5,7 @@ LABEL maintener="Koichi Murakami <koichi.murakami@kek.jp>"
 
 ENV DEBIAN_FRONTEND=nointeractive
 
-ARG g4version="10.07.p03"
+ARG g4version="11.0.0"
 
 #
 RUN apt update && \
@@ -14,14 +14,14 @@ RUN apt update && \
 
 #
 WORKDIR /opt/geant4
-RUN wget https://geant4-data.web.cern.ch/releases/geant4.${g4version}.tar.gz && \
-    tar zxvf geant4.${g4version}.tar.gz
+RUN wget https://geant4-data.web.cern.ch/releases/geant4-v${g4version}.tar.gz && \
+    tar zxvf geant4-v${g4version}.tar.gz
 
 #
 WORKDIR /opt/geant4/build
 RUN cmake -DCMAKE_INSTALL_PREFIX=/opt/geant4/${g4version} \
           -DGEANT4_INSTALL_DATA=ON \
-          -DGEANT4_INSTALL_DATADIR=/opt/geant4/data ../geant4.${g4version} && \
+          -DGEANT4_INSTALL_DATADIR=/opt/geant4/data ../geant4-v${g4version} && \
     make -j`nproc` && \
     make install
 
@@ -31,7 +31,7 @@ LABEL maintener="Koichi Murakami <koichi.murakami@kek.jp>"
 
 ENV DEBIAN_FRONTEND=nointeractive
 
-ARG g4version="10.07.p03"
+ARG g4version="11.0.0"
 
 RUN apt update && \
     apt install -y tcsh zsh sudo make build-essential vim \
