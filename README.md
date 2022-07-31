@@ -11,9 +11,16 @@ Geant4 is installed in
 
 <img src="https://geant4.web.cern.ch/sites/geant4.web.cern.ch/files/g4logo-full-500x167.png" width=50%>
 
+
+Run the following command before building to prepare `Arm64` QEMU environment:
+~~~~
+# docker run --rm --privileged multiarch/qemu-user-static --reset -p yes -c yes
+~~~~
+
 # Supported Tags
 
 * `latest` : latest version of Geant4
+* `11.0.2` : v11.0.2
 * `11.0.0` : v11.0
 * `10.7.3-mt` : v10.7.p03 (MT)
 * `10.7.3` : v10.7.p03
