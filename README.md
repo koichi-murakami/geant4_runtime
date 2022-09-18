@@ -2,7 +2,7 @@
 
 Runtime image for Geant4
 
-This image is based on `Ubuntu 20.04 LTS`.
+This image is based on `Ubuntu 22.04 LTS`.
 This image does not contain visualization components.
 
 Geant4 is installed in
@@ -20,8 +20,11 @@ Run the following command before building to prepare `Arm64` QEMU environment:
 # Supported Tags
 
 * `latest` : latest version of Geant4
+* `11.0.3` : v11.0.3
 * `11.0.2` : v11.0.2
 * `11.0.0` : v11.0
+* `10.7.4-mt` : v10.7.p04 (MT)
+* `10.7.4` : v10.7.p04
 * `10.7.3-mt` : v10.7.p03 (MT)
 * `10.7.3` : v10.7.p03
 * `10.7.2-mt` : v10.7.p02 (MT)
