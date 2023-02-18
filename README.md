@@ -20,6 +20,7 @@ Run the following command before building to prepare `Arm64` QEMU environment:
 # Supported Tags
 
 * `latest` : latest version of Geant4
+* `11.1.0` : v11.1.0
 * `11.0.3` : v11.0.3
 * `11.0.2` : v11.0.2
 * `11.0.0` : v11.0
