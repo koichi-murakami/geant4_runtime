@@ -7,7 +7,7 @@ export DOCKER_BUILDKIT=1
 
 echo "@@ Build Docker image ..."
 
-target=koichimurakamik6/geant4-runtime:latest
+target=koichimurakamik6/geant4-runtime:11.1.1
 
 id=`docker image ls -q $target`
 
