@@ -1,17 +1,21 @@
 # Dockerfile for Geant4 Runtime
 
+ARG g4version="11.1.1"
+
 FROM ubuntu:latest as sdk
 LABEL maintener="Koichi Murakami <koichi.murakami@kek.jp>"
 
+ARG g4version
 ENV DEBIAN_FRONTEND=nointeractive
 
-ARG g4version="11.1.1"
-
-#
 RUN apt update && \
-    apt install -y make build-essential libexpat1-dev cmake wget && \
-    mkdir -p /opt/geant4/build
+    apt install -y tcsh zsh sudo make build-essential vim \
+                   libboost-dev libexpat1-dev libxerces-c-dev \
+                   libcpputest-dev git cmake wget && \
+    rm -rf /var/lib/apt/lists/*
+    mkdir -p /opt/geant4/
 
+FROM sdk as build
 #
 WORKDIR /opt/geant4
 RUN wget https://geant4-data.web.cern.ch/releases/geant4-v${g4version}.tar.gz && \
@@ -26,18 +30,11 @@ RUN cmake -DCMAKE_INSTALL_PREFIX=/opt/geant4/${g4version} \
     make install
 
 # -------------------------------------------------------------------
-FROM ubuntu:latest
-LABEL maintener="Koichi Murakami <koichi.murakami@kek.jp>"
+FROM sdk as release
 
-ENV DEBIAN_FRONTEND=nointeractive
+ARG g4version
 
-ARG g4version="11.1.1"
-
-RUN apt update && \
-    apt install -y tcsh zsh sudo make build-essential vim \
-                   libboost-dev libexpat1-dev libxerces-c-dev \
-                   libcpputest-dev git cmake wget && \
-    mkdir -p /opt/geant4/data
+RUN mkdir -p /opt/geant4/data
 
 #
 WORKDIR /opt/geant4
@@ -45,8 +42,5 @@ COPY --from=sdk /opt/geant4/${g4version} .
 
 WORKDIR /opt/geant4/data
 COPY --from=sdk /opt/geant4/data .
-
-#
-RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /
